@@ -1,0 +1,17 @@
+### Create card
+POST http://localhost:8000/tinder/cards
+Content-Type: application/json
+
+[
+  {
+    "name": "Elmon Musk",
+    "imgUrl": "./020.jpg"
+  },
+  {
+    "name": "Elsa Mila",
+    "imgUrl": "./387.jpg"
+  }
+]
+
+### Get all cards
+GET http://localhost:8000/tinder/cards
