@@ -15,6 +15,3 @@ Content-Type: application/json
 
 ### Get all cards
 GET http://localhost:8000/api/cards
-
-### Get all cards
-GET http://localhost:8000/api/cards

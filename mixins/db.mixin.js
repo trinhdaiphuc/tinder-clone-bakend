@@ -1,7 +1,7 @@
 "use strict";
 
-const fs = require("fs");
 const DbService	= require("moleculer-db");
+const { MoleculerError } = require("moleculer").Errors;
 
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
@@ -60,18 +60,8 @@ module.exports = function(collection) {
 
 		schema.adapter = new MongoAdapter(process.env.MONGO_URI);
 		schema.collection = collection;
-	} else if (process.env.TEST) {
-		// NeDB memory adapter for testing
-		schema.adapter = new DbService.MemoryAdapter();
 	} else {
-		// NeDB file DB adapter
-
-		// Create data folder
-		if (!fs.existsSync("./data")) {
-			fs.mkdirSync("./data");
-		}
-
-		schema.adapter = new DbService.MemoryAdapter({ filename: `./data/${collection}.db` });
+		throw new MoleculerError("Can not connect to DB", 500);
 	}
 
 	return schema;
