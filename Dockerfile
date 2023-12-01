@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM node:21.2-alpine3.18
 
 ENV NODE_ENV=production
 
