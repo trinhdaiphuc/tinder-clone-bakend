@@ -26,11 +26,11 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "moleculer": "^0.14.10",
-    "moleculer-db": "^0.8.10",
-    "moleculer-db-adapter-mongoose": "^0.8.8",
-    "moleculer-web": "^0.9.0",
-    "mongoose": "^5.10.7"
+    "moleculer": "^0.14.20",
+    "moleculer-db": "^0.8.15",
+    "moleculer-db-adapter-mongoose": "^0.8.10",
+    "moleculer-web": "^0.10.6",
+    "mongoose": "^5.12.4"
   },
   "engines": {
     "node": ">= 10.x.x"
